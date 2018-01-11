@@ -1,5 +1,6 @@
 package android.dominando.ex02_activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,14 +21,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Referenciando com XML
         edtTexto = (EditText) findViewById(R.id.editText);
         Button button = (Button) findViewById(R.id.button);
+        Button buttonTela2 = (Button) findViewById(R.id.button2);
+        Button buttonTela3 = (Button) findViewById(R.id.button3);
 
         // Setando evento onclick
         button.setOnClickListener(this);
+        buttonTela2.setOnClickListener(this);
+        buttonTela3.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v){
-        String texto = edtTexto.getText().toString();
-        Toast.makeText(this, texto, Toast.LENGTH_LONG).show();
+        switch (v.getId()) {
+            case R.id.button:
+                String texto = edtTexto.getText().toString();
+                Toast.makeText(this, texto, Toast.LENGTH_LONG).show();
+                break;
+            case R.id.button2:
+                Intent it = new Intent(this, Tela2Activity.class);
+                it.putExtra("nome", "Paulo");
+                it.putExtra("idade", 29);
+                startActivity(it);
+                break;
+            case R.id.button3:
+                Cliente cliente = new Cliente(1,"Paulo Edson");
+                Intent it2 = new Intent(this, Tela2Activity.class);
+                it2.putExtra("cliente", cliente);
+                startActivity(it2);
+                break;
+        }
     }
 }
