@@ -3,6 +3,7 @@ package android.dominando.ex02_activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class Tela2Activity extends AppCompatActivity {
@@ -28,5 +29,37 @@ public class Tela2Activity extends AppCompatActivity {
 
             txtTexto.setText(String.format("Nome: %s / Idade: %d", nome, idade));
         }
+
+        Log.i("NGVL", "Tela1:onCreate");
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.i("NGVL", "Tela1:onPause");
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.i("NGVL", "Tela1:onResume");
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        Log.i("NGVL", "Tela1:onStop");
+    }
+
+    @Override
+    public void onRestart(){
+        super.onRestart();
+        Log.i("NGVL", "Tela1:onRestart");
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        Log.i("NGVL", "Tela1:onDestroy");
     }
 }
