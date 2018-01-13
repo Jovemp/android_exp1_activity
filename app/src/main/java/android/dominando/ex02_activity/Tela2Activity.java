@@ -30,36 +30,36 @@ public class Tela2Activity extends AppCompatActivity {
             txtTexto.setText(String.format("Nome: %s / Idade: %d", nome, idade));
         }
 
-        Log.i("NGVL", "Tela1:onCreate");
+        Log.i("NGVL", "Tela2:onCreate");
     }
 
     @Override
     public void onPause(){
         super.onPause();
-        Log.i("NGVL", "Tela1:onPause");
+        Log.i("NGVL", "Tela2:onPause");
     }
 
     @Override
     public void onResume(){
         super.onResume();
-        Log.i("NGVL", "Tela1:onResume");
+        Log.i("NGVL", "Tela2:onResume");
     }
 
     @Override
     public void onStop(){
         super.onStop();
-        Log.i("NGVL", "Tela1:onStop");
+        Log.i("NGVL", "Tela2:onStop");
     }
 
     @Override
     public void onRestart(){
         super.onRestart();
-        Log.i("NGVL", "Tela1:onRestart");
+        Log.i("NGVL", "Tela2:onRestart");
     }
 
     @Override
     public void onDestroy(){
         super.onDestroy();
-        Log.i("NGVL", "Tela1:onDestroy");
+        Log.i("NGVL", "Tela2:onDestroy");
     }
 }
